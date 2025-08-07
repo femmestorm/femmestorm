@@ -2,25 +2,25 @@
 
 /* CSS Variables - Edit these to change colors and fonts across your entire site */
 :root {
-    /* Color scheme - change these hex codes to your preferred colors */
-    --primary-color: #ff9617a7;        /* Main pink/red color - change this */
-    --secondary-color: #9c27b0;      /* Purple accent - change this */
-    --accent-color: #ff4081;         /* Bright accent - change this */
-    --text-dark: #2c2c2c;           /* Dark text color */
-    --text-light: #666666;          /* Light text color */
-    --text-white: #ffffff;          /* White text */
-    --background-light: #fafafa;     /* Light background */
-    --background-white: #ffffff;     /* White background */
-    --border-color: #e0e0e0;        /* Border color */
+    /* Minimalist grayscale color scheme */
+    --primary-color: rgba(0, 0, 0, 0.85);   /* Dark text */
+    --secondary-color: rgba(0, 0, 0, 0.75); /* Medium gray text */
+    --accent-color: rgba(0, 0, 0, 0.9);     /* Darkest text for emphasis */
+    --text-dark: rgba(0, 0, 0, 0.85);       /* Dark text color */
+    --text-light: rgba(0, 0, 0, 0.6);       /* Light text color */
+    --text-white: #ffffff;                  /* White text */
+    --background-light: #ffffff;            /* White background */
+    --background-white: #ffffff;            /* White background */
+    --border-color: rgba(0, 0, 0, 0.1);    /* Subtle border */
     
-    /* Fonts - change these to your preferred fonts */
-    --font-primary: 'Georgia', serif;         /* Main font - you can use Google Fonts */
-    --font-secondary: 'Georgia', serif;       /* Secondary font for headings */
+    /* Modern minimal typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     
-    /* Spacing */
+    /* Generous spacing for minimalist design */
     --container-max-width: 1200px;
-    --section-padding: 80px 0;
-    --border-radius: 8px;
+    --section-padding: 120px 0;
+    --border-radius: 0;
 }
 
 /* Reset and base styles */
@@ -35,6 +35,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-white);
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
 }
 
 /* Container for centering content */
@@ -44,135 +46,142 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation Styles - Edit to customize your navigation */
+/* Minimal Navigation */
 .navbar {
     background-color: var(--background-white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
-    max-width: var(--container-max-width);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
 }
 
-/* Logo styles - edit text color and size */
+/* Minimal logo */
 .nav-logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 2.8rem;
+    font-weight: normal;
+    color: var(--text-dark);
     text-decoration: none;
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
+    letter-spacing: -0.02em;
 }
 
-/* Navigation menu */
+/* Clean navigation menu */
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav-link {
-    color: var(--text-dark);
+    color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: normal;
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--text-dark);
 }
 
 /* Main content area */
 .main-content {
-    margin-top: 70px; /* Account for fixed navbar */
+    margin-top: 80px; /* Account for fixed navbar */
 }
 
-/* Page headers */
+/* Clean page headers */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--text-white);
-    padding: 80px 0;
+    background: var(--background-white);
+    color: var(--text-dark);
+    padding: 120px 0 80px;
     text-align: center;
 }
 
 .page-title {
-    font-size: 3rem;
-    font-family: var(--font-secondary);
+    font-size: 2.8rem;
+    font-family: var(--font-primary);
     margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
 }
 
 .page-description {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* Hero section (home page) */
+/* Minimal hero section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--text-white);
-    /* padding: 120px 0; */
+    background: var(--background-white);
+    color: var(--text-dark);
     text-align: center;
-    min-height: 600px;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 40px;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-family: var(--font-secondary);
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-family: var(--font-primary);
+    margin-bottom: 60px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
 }
 
 .hero-description {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
+    font-size: 1.4rem;
+    margin-bottom: 80px;
+    color: var(--secondary-color);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-/* Button styles - edit colors and sizes */
+/* Minimal button styles */
 .btn {
     display: inline-block;
-    /*padding: 15px 30px; */
-    border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: normal;
+    transition: color 0.2s ease;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.4rem;
+    background: transparent;
+    padding: 0;
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
-    color: var(--text-white);
+    color: var(--secondary-color);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
+    color: var(--text-dark);
 }
 
 .btn-secondary {
@@ -182,7 +191,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: var(--text-white);
+    background-color: var(--text-red);
     color: var(--primary-color);
 }
 
@@ -194,7 +203,7 @@ section {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    font-family: var(--font-secondary);
+    font-family: var(serif);
     margin-bottom: 50px;
     color: var(--text-dark);
 }
@@ -603,33 +612,45 @@ section {
     box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.2);
 }
 
-/* Footer styles */
+/* Minimal footer styles */
 .footer {
-    background-color: var(--text-dark);
-    color: var(--text-white);
-    padding: 40px 0;
+    background-color: var(--background-white);
+    color: var(--secondary-color);
+    padding: 80px 40px;
     text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 120px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 1.4rem;
+    margin: 0;
 }
 
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 60px;
 }
 
 .social-link {
-    color: var(--text-white);
+    color: var(--secondary-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    font-size: 1.4rem;
 }
 
 .social-link:hover {
-    color: var(--primary-color);
+    color: var(--text-dark);
 }
 
 /* Responsive Design - Styles for different screen sizes */
