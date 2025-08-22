@@ -46,27 +46,31 @@ body {
     padding: 0 20px;
 }
 
-/* Minimal Navigation */
+/* Left Sidebar Navigation */
 .navbar {
-    background-color: var(--background-white);
+    background-color: transparent;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    height: 100vh;
+    width: 250px;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+    padding: 40px 0;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 80px;
+    height: 100%;
+    padding: 0 20px;
 }
 
 /* Minimal logo */
+.nav-logo {
+    margin-bottom: 60px;
+}
+
 .nav-logo a {
     font-size: 2.8rem;
     font-weight: normal;
@@ -79,8 +83,10 @@ body {
 /* Clean navigation menu */
 .nav-menu {
     display: flex;
+    flex-direction: column;
     list-style: none;
-    gap: 40px;
+    gap: 30px;
+    align-items: center;
 }
 
 .nav-link {
@@ -99,7 +105,7 @@ body {
 
 /* Main content area */
 .main-content {
-    margin-top: 80px; /* Account for fixed navbar */
+    margin-left: 250px; /* Account for left sidebar */
 }
 
 /* Clean page headers */
@@ -657,21 +663,37 @@ section {
 
 /* Tablet styles */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: auto;
-        padding: 15px 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 0;
+    }
+    
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 0 20px;
+    }
+    
+    .nav-logo {
+        margin-bottom: 0;
     }
     
     .nav-menu {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
         gap: 20px;
     }
     
     .main-content {
-        margin-top: 120px; /* Account for taller mobile nav */
+        margin-left: 0;
+        margin-top: 80px; /* Account for top nav on mobile */
     }
     
     .hero-title {
@@ -727,6 +749,17 @@ section {
     
     .nav-container {
         padding: 10px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-content {
+        margin-top: 120px; /* Account for taller mobile nav */
     }
     
     .hero {
