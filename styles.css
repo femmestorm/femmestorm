@@ -14,8 +14,8 @@
     --border-color: rgba(135, 133, 133, 0.686);    /* Subtle border */
     
     /* Modern minimal typography */
-    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    --font-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-primary: 'Times New Roman', Times, serif;
+    --font-secondary: 'Times New Roman', Times, serif;
     
     /* Generous spacing for minimalist design */
     --container-max-width: 1200px;
@@ -48,7 +48,7 @@ body {
 
 /* Left Sidebar Navigation */
 .navbar {
-    background-color: transparent;
+    background-color: rgba(199, 164, 185, 0.392);
     position: fixed;
     top: 0;
     left: 0;
@@ -142,6 +142,105 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 40px;
+}
+
+/* Full screen hero image */
+.hero-fullscreen {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Social star shapes */
+.social-stars {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 80px;
+}
+
+.star-container {
+    position: relative;
+}
+
+.star-shape {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(199, 164, 185, 0.9);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 0.3s ease;
+}
+
+.star-shape:hover {
+    transform: scale(1.1);
+}
+
+/* Position stars at different angles */
+.star-instagram {
+    transform: rotate(-20deg);
+}
+
+.star-spotify {
+    transform: rotate(0deg);
+}
+
+.star-linkedin {
+    transform: rotate(20deg);
+}
+
+.star-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.2s ease;
+    transform: rotate(0deg); /* Keep text horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.star-instagram .star-link {
+    transform: rotate(20deg) translateX(-8px); /* Counter-rotate text and move left */
+}
+
+.star-spotify .star-link {
+    transform: rotate(0deg); /* Keep text straight */
+}
+
+.star-linkedin .star-link {
+    transform: rotate(-20deg); /* Counter-rotate text */
+}
+
+.star-link:hover {
+    color: var(--accent-color);
 }
 
 .hero-title {
@@ -620,12 +719,17 @@ section {
 
 /* Minimal footer styles */
 .footer {
-    background-color: var(--background-white);
+    background-color: rgba(199, 164, 185, 0.392);
     color: var(--secondary-color);
     padding: 80px 40px;
     text-align: center;
     border-top: 1px solid var(--border-color);
     margin-top: 120px;
+}
+
+/* Remove footer margin on home page - target body containing hero-fullscreen */
+body:has(.hero-fullscreen) .footer {
+    margin-top: 0;
 }
 
 .footer-content {
