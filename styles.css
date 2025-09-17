@@ -2,16 +2,16 @@
 
 /* CSS Variables - Edit these to change colors and fonts across your entire site */
 :root {
-    /* Minimalist grayscale color scheme */
-    --primary-color: rgba(0, 0, 0, 0.85);   /* Dark text */
-    --secondary-color: rgba(0, 0, 0, 0.75); /* Medium gray text */
-    --accent-color: rgba(0, 0, 0, 0.9);     /* Darkest text for emphasis */
-    --text-dark: rgba(0, 0, 0, 0.85);       /* Dark text color */
-    --text-light: rgba(0, 0, 0, 0.6);       /* Light text color */
-    --text-white: #ffffff;                  /* White text */
-    --background-light: #f8f8f8;            /* White background */
-    --background-white: #fcfcfc;            /* White background */
-    --border-color: rgba(135, 133, 133, 0.686);    /* Subtle border */
+    /* Custom color scheme - edit these values */
+    --primary-color: #000000;              /* Black text */
+    --secondary-color: #000000;            /* Black text */
+    --accent-color: #4c1d95;               /* Deep purple accent for emphasis */
+    --text-dark: #000000;                  /* Black text color */
+    --text-light: #7f8c8d;                 /* Light gray text */
+    --text-white: #ffffff;                 /* White text */
+    --background-light: #ecf0f1;           /* Light gray background */
+    --background-white: #fefbf3;           /* Pale yellow background */
+    --border-color: #bdc3c7;               /* Light gray border */
     
     /* Modern minimal typography */
     --font-primary: 'Times New Roman', Times, serif;
@@ -53,22 +53,22 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 250px;
+    width: 140px;
     z-index: 1000;
-    padding: 40px 0;
+    padding: 15px 0;
 }
 
 .nav-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     padding: 0 20px;
 }
 
 /* Minimal logo */
 .nav-logo {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
 .nav-logo a {
@@ -76,7 +76,7 @@ body {
     font-weight: normal;
     color: var(--text-dark);
     text-decoration: none;
-    font-family: var(--font-primary);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     letter-spacing: -0.02em;
 }
 
@@ -85,8 +85,8 @@ body {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 30px;
-    align-items: center;
+    gap: 12px;
+    align-items: flex-start;
 }
 
 .nav-link {
@@ -96,6 +96,7 @@ body {
     font-size: 1.4rem;
     transition: color 0.2s ease;
     letter-spacing: 0.02em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .nav-link:hover,
@@ -105,7 +106,64 @@ body {
 
 /* Main content area */
 .main-content {
-    margin-left: 250px; /* Account for left sidebar */
+    margin-left: 140px; /* Account for left sidebar */
+    position: relative;
+}
+
+/* Vertical gradient lines for all pages */
+.main-content::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 140px;
+    width: 50vw;
+    height: 100vh;
+    background: linear-gradient(
+        90deg,
+        rgba(199, 164, 185, 0.392) 0px,
+        rgba(199, 164, 185, 0.35) 3px,
+        rgba(199, 164, 185, 0.25) 6px,
+        rgba(199, 164, 185, 0.2) 12px,
+        rgba(199, 164, 185, 0.15) 25px,
+        rgba(199, 164, 185, 0.1) 40px,
+        rgba(199, 164, 185, 0.05) 70px,
+        transparent 120px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Vertical stripes for photos page only */
+.photos-page .main-content::before {
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(199, 164, 185, 0.3) 0px,
+        rgba(199, 164, 185, 0.3) 2px,
+        transparent 2px,
+        transparent 8px,
+        rgba(199, 164, 185, 0.25) 8px,
+        rgba(199, 164, 185, 0.25) 10px,
+        transparent 10px,
+        transparent 18px,
+        rgba(199, 164, 185, 0.2) 18px,
+        rgba(199, 164, 185, 0.2) 20px,
+        transparent 20px,
+        transparent 30px,
+        rgba(199, 164, 185, 0.15) 30px,
+        rgba(199, 164, 185, 0.15) 32px,
+        transparent 32px,
+        transparent 45px,
+        rgba(199, 164, 185, 0.1) 45px,
+        rgba(199, 164, 185, 0.1) 47px,
+        transparent 47px,
+        transparent 65px
+    );
+}
+
+/* Remove gradient/stripes from home and info pages */
+.home-page .main-content::before,
+.info-page .main-content::before {
+    display: none;
 }
 
 /* Clean page headers */

@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>photos</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background-color: #fefbf3;" class="photos-page">
     <!-- Navigation bar - same across all pages -->
     <nav class="navbar">
         <div class="nav-container">
@@ -18,10 +23,10 @@
             <!-- Navigation menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="photos.html" class="nav-link active">image</a>
+                    <a href="blog.html" class="nav-link">blog</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog.html" class="nav-link">blog</a>
+                    <a href="photos.html" class="nav-link active">image</a>
                 </li>
                 <li class="nav-item">
                     <a href="self.html" class="nav-link">self</a>
@@ -36,33 +41,66 @@
     <!-- Main content area -->
     <main class="main-content">
         <!-- Page header -->
-        <section class="page-header">
-            <div class="container">
-                <!-- Edit this heading -->
-                <h1 class="page-title">photos</h1>
-                <!-- Edit this description -->
-                <p class="page-description">
-                     photo collection and creative works
-                </p>
+        <section class="page-header" style="text-align: right; padding: 60px 0 40px;">
+            <div class="container" style="max-width: 400px; margin-left: auto; margin-right: 40px;">
+                <!-- Minimized heading -->
+                <h1 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--text-dark); font-weight: normal;">collections</h1>
+                <!-- Description area -->
+                <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
+                    <!-- Add your description here -->
+                    <p> exploring moments through different lenses + perspectives, capturing the world in film and digital formats. </p
+
+                
             </div>
         </section>
 
-        <!-- Photo gallery section -->
-        <section class="gallery">
-            <div class="container">
-                <!-- Gallery filters - add/remove categories as needed -->
-                <div class="gallery-filters">
-                    <button class="filter-btn active" data-filter="all">all</button>
-                    <button class="filter-btn" data-filter="portraits">portraits</button>
-                    <button class="filter-btn" data-filter="nature">nature</button>
-                </div>
+                <!-- Photo collections list -->
+                <div style="position: relative; text-align: left;">
+                    
+                    <!-- Film collections -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); position: relative; margin-left: 120px;">
+                            <span style="position: absolute; left: -160px; top: 50%; height: 1px; background-color: var(--text-dark); width: 120px;"></span>
+                            on film
+                        </h3>
+                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                            <li style="position: relative; margin-left: 80px;">
+                                <span style="position: absolute; left: -120px; top: 50%; height: 1px; background-color: var(--text-dark); width: 80px;"></span>
+                                <a href="#" class="btn btn-primary">creature</a>
+                            </li>
+                            <li style="position: relative; margin-left: 160px;">
+                                <span style="position: absolute; left: -200px; top: 50%; height: 1px; background-color: var(--text-dark); width: 160px;"></span>
+                                <a href="#" class="btn btn-primary">patterns</a>
+                            </li>
+                            <li style="position: relative; margin-left: 100px;">
+                                <span style="position: absolute; left: -140px; top: 50%; height: 1px; background-color: var(--text-dark); width: 100px;"></span>
+                                <a href="#" class="btn btn-primary">misc.</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Photo grid placeholder -->
-                <div class="gallery-grid">
-                    <!-- Photos will be added here -->
-                    <p style="text-align: center; color: var(--secondary-color); margin: 100px 0;">
-                        <small>photos coming soon...</small>
-                    </p>
+                    <!-- Digital collections -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); position: relative; margin-left: 140px;">
+                            <span style="position: absolute; left: -180px; top: 50%; height: 1px; background-color: var(--text-dark); width: 140px;"></span>
+                            digital
+                        </h3>
+                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                            <li style="position: relative; margin-left: 200px;">
+                                <span style="position: absolute; left: -240px; top: 50%; height: 1px; background-color: var(--text-dark); width: 200px;"></span>
+                                <a href="#" class="btn btn-primary">sky</a>
+                            </li>
+                            <li style="position: relative; margin-left: 60px;">
+                                <span style="position: absolute; left: -100px; top: 50%; height: 1px; background-color: var(--text-dark); width: 60px;"></span>
+                                <a href="#" class="btn btn-primary">color</a>
+                            </li>
+                            <li style="position: relative; margin-left: 180px;">
+                                <span style="position: absolute; left: -220px; top: 50%; height: 1px; background-color: var(--text-dark); width: 180px;"></span>
+                                <a href="#" class="btn btn-primary">around</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
