@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background-color: #fefbf3;">
     <!-- Navigation bar - same across all pages -->
     <nav class="navbar">
         <div class="nav-container">
@@ -18,10 +23,10 @@
             <!-- Navigation menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="photos.html" class="nav-link">image</a>
+                    <a href="blog.html" class="nav-link active">blog</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog.html" class="nav-link active">blog</a>
+                    <a href="photos.html" class="nav-link">image</a>
                 </li>
                 <li class="nav-item">
                     <a href="self.html" class="nav-link">self</a>
@@ -36,32 +41,46 @@
     <!-- Main content area -->
     <main class="main-content">
         <!-- Page header -->
-        <section class="page-header">
-            <div class="container">
-                <!-- Edit this heading -->
-                <h1 class="page-title">words</h1>
-                <!-- Edit this description -->
-                <p class="page-description">
-                    sharing my thoughts & reflections + 
-                </p>
+        <section class="page-header" style="text-align: right; padding: 60px 0 40px;">
+            <div class="container" style="max-width: 400px; margin-left: auto; margin-right: 40px;">
+                <!-- Minimized heading -->
+                <h1 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--text-dark); font-weight: normal;">words</h1>
+                <!-- Description area -->
+                <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
+                    <!-- Add your description here -->
+                    <p>sharing my thoughts & reflections +</p>
+                </div>
             </div>
         </section>
 
-        <div class="container" style="text-align: center;">
-            <ul style="display: inline-block; text-align: left; list-style: none; padding: 0;">
-               <li><a href="#" class="btn btn-primary"> poem</a></li>
-               <li><a href="#" class="btn btn-primary"> reflection</a></li>
-               <li><a href="#" class="btn btn-primary"> essay</a></li>
-               <li><a href="#" class="btn btn-primary"> freewrite</a></li>
-             </ul>
+        <!-- Blog categories list with staggered lines -->
+        <div style="position: relative; text-align: left; padding-left: 60px; margin-top: 40px;">
+            <ul style="list-style: none; padding: 0; line-height: 2.2;">
+                <li style="position: relative; margin-left: 90px;">
+                    <span style="position: absolute; left: -90px; top: 50%; height: 1px; background-color: var(--text-dark); width: 70px;"></span>
+                    <a href="#" class="btn btn-primary">poem</a>
+                </li>
+                <li style="position: relative; margin-left: 130px;">
+                    <span style="position: absolute; left: -130px; top: 50%; height: 1px; background-color: var(--text-dark); width: 110px;"></span>
+                    <a href="#" class="btn btn-primary">reflection</a>
+                </li>
+                <li style="position: relative; margin-left: 50px;">
+                    <span style="position: absolute; left: -50px; top: 50%; height: 1px; background-color: var(--text-dark); width: 30px;"></span>
+                    <a href="#" class="btn btn-primary">essay</a>
+                </li>
+                <li style="position: relative; margin-left: 110px;">
+                    <span style="position: absolute; left: -110px; top: 50%; height: 1px; background-color: var(--text-dark); width: 90px;"></span>
+                    <a href="#" class="btn btn-primary">freewrite</a>
+                </li>
+            </ul>
         </div>
 
 
 
 
         <!-- Newsletter signup section - optional -->
-        <section class="newsletter">
-            <div class="container">
+        <section class="newsletter" style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 0; padding: 30px 20px; background-color: #fefbf3; border-top: 1px solid var(--text-dark);">
+            <div style="max-width: 400px;">
                 <div class="newsletter-content">
                     <h5>Stay Updated</h5>
                     <p><small>subscribe to get notified about new posts</small></p>
