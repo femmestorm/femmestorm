@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #fefbf3;">
+<body style="background-color: #fefbf3;" class="self-page">
     <!-- Navigation bar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -20,16 +20,16 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="blog.html" class="nav-link">blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="photos.html" class="nav-link">image</a>
+                    <a href="info.html" class="nav-link">info</a>
                 </li>
                 <li class="nav-item">
                     <a href="self.html" class="nav-link active">self</a>
                 </li>
                 <li class="nav-item">
-                    <a href="info.html" class="nav-link">info</a>
+                    <a href="blog.html" class="nav-link">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="photos.html" class="nav-link">image</a>
                 </li>
             </ul>
         </div>
@@ -45,29 +45,11 @@
                 <!-- Description area -->
                 <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
                     <!-- Add your description here -->
-                    <p>modeling work and information for collaborations</p>
+                    <p>modeling book</p>
                 </div>
             </div>
         </section>
 
-        <!-- About section -->
-        <section class="bio-section" style="background-color: #f5f3f6;">
-            <div class="container">
-                <div style="display: flex; gap: 50px;">
-                    <!-- Left side - About text -->
-                    <div style="flex: 1; max-width: 400px;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text-dark);">about me</h3>
-                        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--secondary-color);">
-                            <p style="margin-bottom: 15px;">Welcome to my portfolio. I'm passionate about creative expression through fashion, lifestyle, and artistic photography.</p>
-                            <p style="margin-bottom: 20px;">My goal is to collaborate with talented photographers, designers, and creative teams to bring visions to life.</p>
-                        </div>
-                        
-                        <div style="margin-top: 25px;">
-                            <a href="#contact" class="btn btn-primary" style="margin-right: 15px;">get in touch</a>
-                            <a href="#" class="btn btn-secondary">download resume</a>
-                        </div>
-                    </div>
-                    
                     <!-- Right side - Space for images -->
                     <div style="flex: 1;">
                         <!-- Images can be uploaded here -->
@@ -80,58 +62,7 @@
         </section>
 
 
-        <!-- Contact section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h4 style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: var(--text-dark);">let's work together</h4>
-                <div style="display: flex; gap: 50px;">
-                    <!-- Left side - Contact info -->
-                    <div style="flex: 1; max-width: 400px;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text-dark);">get in touch</h3>
-                        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--secondary-color);">
-                            <p style="margin-bottom: 20px;">interested in collaborating? i'd love to hear about your project</p>
-                            <div style="margin-bottom: 15px;">
-                                <strong>Email:</strong> shereengolkar@gmail.com
-                            </div>
-                            <div style="margin-bottom: 20px;">
-                                <strong>Location:</strong> NYC
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right side - Contact form -->
-                    <div style="flex: 1;">
-                        <div style="max-width: 350px;">
-                            <form>
-                                <div style="margin-bottom: 15px;">
-                                    <label for="name" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Name</label>
-                                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label for="email" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Email</label>
-                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label for="project-type" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Project Type</label>
-                                    <select id="project-type" name="project-type" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
-                                        <option value="">Select project type</option>
-                                        <option value="fashion">model</option>
-                                        <option value="commercial">photo</option>
-                                        <option value="lifestyle">misc.</option>
-                                    </select>
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label for="message" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Message</label>
-                                    <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 16px;">send message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+       
 
     <!-- Footer -->
  <footer class="footer">

@@ -12,7 +12,7 @@
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #fefbf3;">
+<body style="background-color: #fefbf3;" class="blog-page">
     <!-- Navigation bar - same across all pages -->
     <nav class="navbar">
         <div class="nav-container">
@@ -23,16 +23,16 @@
             <!-- Navigation menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="blog.html" class="nav-link active">blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="photos.html" class="nav-link">image</a>
+                    <a href="info.html" class="nav-link">info</a>
                 </li>
                 <li class="nav-item">
                     <a href="self.html" class="nav-link">self</a>
                 </li>
                 <li class="nav-item">
-                    <a href="info.html" class="nav-link">info</a>
+                    <a href="blog.html" class="nav-link active">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="photos.html" class="nav-link">image</a>
                 </li>
             </ul>
         </div>
@@ -53,24 +53,20 @@
             </div>
         </section>
 
-        <!-- Blog categories list with staggered lines -->
-        <div style="position: relative; text-align: left; padding-left: 60px; margin-top: 40px;">
-            <ul style="list-style: none; padding: 0; line-height: 2.2;">
-                <li style="position: relative; margin-left: 90px;">
-                    <span style="position: absolute; left: -90px; top: 50%; height: 1px; background-color: var(--text-dark); width: 70px;"></span>
-                    <a href="#" class="btn btn-primary">poem</a>
+        <!-- Blog categories list -->
+        <div style="position: relative; text-align: center; max-width: 600px; margin: 40px auto 0;">
+            <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
+                <li style="margin-bottom: 10px;">
+                    <a href="blog-pages/poems.html" class="btn btn-primary">poem</a>
                 </li>
-                <li style="position: relative; margin-left: 130px;">
-                    <span style="position: absolute; left: -130px; top: 50%; height: 1px; background-color: var(--text-dark); width: 110px;"></span>
-                    <a href="#" class="btn btn-primary">reflection</a>
+                <li style="margin-bottom: 10px;">
+                    <a href="blog-pages/reflections.html" class="btn btn-primary">reflection</a>
                 </li>
-                <li style="position: relative; margin-left: 50px;">
-                    <span style="position: absolute; left: -50px; top: 50%; height: 1px; background-color: var(--text-dark); width: 30px;"></span>
-                    <a href="#" class="btn btn-primary">essay</a>
+                <li style="margin-bottom: 10px;">
+                    <a href="blog-pages/essays.html" class="btn btn-primary">essay</a>
                 </li>
-                <li style="position: relative; margin-left: 110px;">
-                    <span style="position: absolute; left: -110px; top: 50%; height: 1px; background-color: var(--text-dark); width: 90px;"></span>
-                    <a href="#" class="btn btn-primary">freewrite</a>
+                <li style="margin-bottom: 10px;">
+                    <a href="blog-pages/freewrites.html" class="btn btn-primary">freewrite</a>
                 </li>
             </ul>
         </div>

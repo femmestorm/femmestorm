@@ -24,16 +24,16 @@
             <!-- Navigation menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="blog.html" class="nav-link">blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="photos.html" class="nav-link">image</a>
+                    <a href="info.html" class="nav-link active">info</a> 
                 </li>
                 <li class="nav-item">
                     <a href="self.html" class="nav-link">self</a>
                 </li>
                 <li class="nav-item">
-                    <a href="info.html" class="nav-link active">info</a> 
+                    <a href="blog.html" class="nav-link">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="photos.html" class="nav-link">image</a>
                 </li>
             </ul>
         </div>
@@ -42,39 +42,118 @@
 
     <!-- Main content area -->
     <main class="main-content">
-        <!-- Full screen hero image -->
-        <section class="hero hero-fullscreen">
-            <div class="hero-image">
-                <img src="Landscape.png" alt="Hero Image">
-                <!-- Social star shapes -->
-                <div class="social-stars">
-                    <div class="star-container star-instagram">
-                        <div class="star-shape">
-                            <a href="https://www.instagram.com/solarshereen/" target="_blank" class="star-link">instagram</a>
+        <!-- Title section at top -->
+        <section class="info-title-section" style="padding: 120px 0 40px; text-align: center; background-color: #dbd9c9; position: relative; z-index: 10;">
+            <div class="container" style="max-width: 600px;">
+                <h2 style="font-family: 'Source Code Pro', 'Courier New', monospace; font-size: 1.8rem; color: var(--text-dark); margin-bottom: 0; font-weight: normal;">about me</h2>
+            </div>
+        </section>
+
+        <!-- Content section with text and image -->
+        <section class="info-content-section" style="padding: 20px 0 60px; background-color: #dbd9c9; position: relative; z-index: 10;">
+            <div class="container" style="max-width: 1200px; display: flex; align-items: flex-start; gap: 60px;">
+                <!-- Left side text -->
+                <div class="info-left-text" style="flex: 1; max-width: 500px;">
+                    <p style="font-size: 1.2rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;">
+                        <!-- ADD YOUR PARAGRAPH TEXT HERE -->
+                        my name is shereen & 
+                        like all the nyc transplants...
+                        i model ! I write ! I draw ! 
+                        and i love to connect with new 
+                        people. 
+                        I work in hospitality + event production and do freelance work as a hairstylist. in my free time I try to learn; whether it be graphic design - djing - or finding new ways to move my body. as an ode to all my interests - 
+                        i welcome you to 
+                        femme storm. 
+                        a digital archive - 
+                        a personal collection of images, writings,
+                        modeling shoots, & recent projects.
+                    </p>
+                </div>
+                
+                <!-- Right side image -->
+                <div class="info-right-image" style="max-width: 400px;">
+                    <img src="infoimage.png" alt="About Me" style="width: 100%; height: auto; border-radius: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="contact-section" style="background-color: #dbd9c9; padding: 60px 0;">
+            <div class="container">
+                <h4 style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: var(--text-dark);">let's work together</h4>
+                <div style="display: flex; gap: 50px;">
+                    <!-- Left side - Contact info -->
+                    <div style="flex: 1; max-width: 400px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 20px; color: var(--text-dark);">get in touch</h3>
+                        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--secondary-color);">
+                            <p style="margin-bottom: 20px;">interested in collaborating? i'd love to hear about your project</p>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Email:</strong> shereengolkar@gmail.com
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <strong>Location:</strong> NYC
+                            </div>
                         </div>
                     </div>
-                    <div class="star-container star-spotify">
-                        <div class="star-shape">
-                            <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="star-link">spotify</a>
+                    
+                    <!-- Middle - Contact form -->
+                    <div style="flex: 1;">
+                        <div style="max-width: 350px;">
+                            <form>
+                                <div style="margin-bottom: 15px;">
+                                    <label for="name" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Name</label>
+                                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label for="email" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Email</label>
+                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label for="project-type" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Project Type</label>
+                                    <select id="project-type" name="project-type" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem;">
+                                        <option value="">Select project type</option>
+                                        <option value="fashion">model</option>
+                                        <option value="commercial">photo</option>
+                                        <option value="lifestyle">misc.</option>
+                                    </select>
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label for="message" style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: var(--text-dark);">Message</label>
+                                    <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 16px;">send message</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="star-container star-linkedin">
-                        <div class="star-shape">
-                            <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="star-link">linkedin</a>
+                    
+                    <!-- Right side - Social stars -->
+                    <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center;">
+                        <div class="star-container star-instagram">
+                            <div class="star-shape" style="width: 130px; height: 130px;">
+                                <a href="https://www.instagram.com/solarshereen/" target="_blank" class="star-link">instagram</a>
+                            </div>
+                        </div>
+                        <div class="star-container star-spotify">
+                            <div class="star-shape" style="width: 130px; height: 130px;">
+                                <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="star-link">spotify</a>
+                            </div>
+                        </div>
+                        <div class="star-container star-linkedin">
+                            <div class="star-shape" style="width: 130px; height: 130px;">
+                                <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="star-link">linkedin</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Minimal Footer -->
-    <footer class="footer">
+    <!-- Social stars and footer section -->
+    <footer class="footer info-footer" style="background-color: #dbd9c9;">
         <div class="container">
             <div class="footer-content">
-                <div class="social-links">
-                
-                </div>
                 <p> &copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i> </p>
             </div>
         </div>
