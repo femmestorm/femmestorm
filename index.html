@@ -42,15 +42,21 @@
     <a href="index.html" class="title-link">femme storm</a>
 
     <main class="main-content">
-        <!-- Full background image layout -->
+        <!-- Text background with floating images -->
         <section class="fullscreen-background">
-            <!-- Background image - replace 'background-image.jpg' with your photo -->
-            <div class="background-image-container">
-                <img src="back.png" alt="Background" class="background-img">
+            <!-- Text background image -->
+            <div class="text-background-container">
+                <img src="nameshereen.png" alt="Text Background" class="text-background-img">
             </div>
             
-            <!-- Optional overlay content -->
-            <div class="overlay-content">
+            <!-- Floating images -->
+            <div class="floating-images">
+                <div class="floating-image floating-image-1">
+                    <img src="imagefull.png" alt="Floating Image 1">
+                </div>
+                <div class="floating-image floating-image-2">
+                    <img src="double.png" alt="Floating Image 2">
+                </div>
             </div>
         </section>
     </main>
@@ -65,5 +71,53 @@
             <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="bottom-social-link">linkedin</a>
         </div>
     </footer>
+
+    <script>
+        // Make floating images draggable
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingImages = document.querySelectorAll('.floating-image');
+            
+            floatingImages.forEach(image => {
+                let isDragging = false;
+                let startX, startY, offsetX, offsetY;
+                
+                image.addEventListener('mousedown', function(e) {
+                    isDragging = true;
+                    image.style.cursor = 'grabbing';
+                    image.style.zIndex = '100';
+                    
+                    const rect = image.getBoundingClientRect();
+                    offsetX = e.clientX - rect.left;
+                    offsetY = e.clientY - rect.top;
+                    
+                    e.preventDefault();
+                });
+                
+                document.addEventListener('mousemove', function(e) {
+                    if (!isDragging) return;
+                    
+                    const x = e.clientX - offsetX;
+                    const y = e.clientY - offsetY;
+                    
+                    image.style.position = 'fixed';
+                    image.style.left = x + 'px';
+                    image.style.top = y + 'px';
+                    image.style.right = 'auto';
+                    image.style.bottom = 'auto';
+                });
+                
+                document.addEventListener('mouseup', function() {
+                    if (isDragging) {
+                        isDragging = false;
+                        image.style.cursor = 'grab';
+                        image.style.zIndex = '5';
+                    }
+                });
+                
+                // Add grab cursor on hover
+                image.style.cursor = 'grab';
+            });
+        });
+    </script>
 </body>
 </html>
