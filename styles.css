@@ -622,6 +622,15 @@ body {
     background-color: #dbd9c9;
 }
 
+/* Blog page navbar and footer color to match white background */
+.blog-page .navbar {
+    background-color: #ffffff;
+}
+
+.blog-page .footer {
+    background-color: #ffffff;
+}
+
 /* Social star shapes */
 .social-stars {
     position: absolute;

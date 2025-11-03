@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Background for Apple touch icon -->
+  <rect width="180" height="180" fill="#fefbf3" rx="30"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#F4A460" stroke-width="4" stroke-linecap="round">
+    <line x1="90" y1="25" x2="90" y2="40"/>
+    <line x1="90" y1="140" x2="90" y2="155"/>
+    <line x1="25" y1="90" x2="40" y2="90"/>
+    <line x1="140" y1="90" x2="155" y2="90"/>
+    <line x1="44" y1="44" x2="55" y2="55"/>
+    <line x1="125" y1="125" x2="136" y2="136"/>
+    <line x1="136" y1="44" x2="125" y2="55"/>
+    <line x1="55" y1="125" x2="44" y2="136"/>
+  </g>
+  
+  <!-- Sun circle -->
+  <circle cx="90" cy="90" r="35" fill="#FFD700" stroke="#F4A460" stroke-width="3"/>
+  
+  <!-- Sun face -->
+  <circle cx="80" cy="82" r="4" fill="#FF8C00"/>
+  <circle cx="100" cy="82" r="4" fill="#FF8C00"/>
+  <path d="M 75 100 Q 90 110 105 100" stroke="#FF8C00" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

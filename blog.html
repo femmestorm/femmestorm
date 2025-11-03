@@ -12,7 +12,7 @@
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #fefbf3;" class="blog-page">
+<body style="background-color: #ffffff;" class="blog-page">
     <!-- Navigation bar - same across all pages -->
     <nav class="navbar">
         <div class="nav-container">
@@ -40,42 +40,49 @@
 
     <!-- Main content area -->
     <main class="main-content">
-        <!-- Page header -->
-        <section class="page-header" style="text-align: right; padding: 60px 0 40px;">
-            <div class="container" style="max-width: 400px; margin-left: auto; margin-right: 40px;">
-                <!-- Minimized heading -->
-                <h1 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--text-dark); font-weight: normal;">words</h1>
-                <!-- Description area -->
-                <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
-                    <!-- Add your description here -->
+        <!-- Title section at top -->
+        <section class="blog-title-section" style="padding: 120px 0 40px; text-align: center; background-color: #ffffff; position: relative; z-index: 10;">
+            <div class="container" style="max-width: 600px;">
+                <h1 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-dark); font-weight: 570;">words</h1>
+                <div style="font-size: 1.2rem; color: var(--secondary-color); line-height: 1.6;">
                     <p>sharing my thoughts & reflections +</p>
                 </div>
             </div>
         </section>
 
-        <!-- Blog categories list -->
-        <div style="position: relative; text-align: center; max-width: 600px; margin: 40px auto 0;">
-            <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
-                <li style="margin-bottom: 10px;">
-                    <a href="blog-pages/poems.html" class="btn btn-primary">poem</a>
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="blog-pages/reflections.html" class="btn btn-primary">reflection</a>
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="blog-pages/essays.html" class="btn btn-primary">essay</a>
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="blog-pages/freewrites.html" class="btn btn-primary">freewrite</a>
-                </li>
-            </ul>
-        </div>
+        <!-- Content section with image and categories -->
+        <section class="blog-content-section" style="padding: 20px 0 60px; background-color: #ffffff; position: relative; z-index: 10;">
+            <div class="container" style="max-width: 1200px; display: flex; align-items: flex-start; gap: 60px; justify-content: center;">
+                <!-- Left side image -->
+                <div class="blog-left-image" style="max-width: 700px;">
+                    <img src="blog page.png" alt="Blog Page" style="width: 100%; height: auto; border-radius: 0;">
+                </div>
+                
+                <!-- Right side categories -->
+                <div class="blog-right-categories" style="flex: 0 0 200px; padding-top: 100px;">
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li style="margin-bottom: 10px;">
+                            <a href="blog-pages/poems.html" class="btn btn-primary">poem</a>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <a href="blog-pages/reflections.html" class="btn btn-primary">reflection</a>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <a href="blog-pages/essays.html" class="btn btn-primary">essay</a>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <a href="blog-pages/freewrites.html" class="btn btn-primary">freewrite</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
 
 
 
         <!-- Newsletter signup section - optional -->
-        <section class="newsletter" style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 0; padding: 30px 20px; background-color: #fefbf3; border-top: 1px solid var(--text-dark);">
+        <section class="newsletter" style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 0; padding: 30px 20px; background-color: #ffffff; border-top: 1px solid var(--text-dark);">
             <div style="max-width: 400px;">
                 <div class="newsletter-content">
                     <h5>Stay Updated</h5>
