@@ -13,15 +13,13 @@
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
-<body style="background-color: #fefbf3;" class="home-page">
-    <!-- Navigation bar - appears on all pages -->
+<body style="background-color: #fefbf3;">
+    <!-- Navigation bar - same as other pages -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Your site logo/name - edit this text -->
             <div class="nav-logo">
-                <a href="index.html"><small>femme storm</small></a>
+                <a href="index.html"><small>femmestorm</small></a>
             </div>
-            <!-- Navigation menu - add/remove links as needed -->
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="info.html" class="nav-link">info</a> 
@@ -39,86 +37,48 @@
         </div>
     </nav>
 
-    <!-- Centered title link -->
-    <a href="index.html" class="title-link">femme storm</a>
-
     <main class="main-content">
-        <!-- Text background with floating images -->
-        <section class="fullscreen-background">
-            <!-- Text background image -->
-            <div class="text-background-container">
-                <img src="nameshereen.png" alt="Text Background" class="text-background-img">
-            </div>
-            
-            <!-- Floating images -->
-            <div class="floating-images">
-                <div class="floating-image floating-image-1">
-                    <img src="imagefull.png" alt="Floating Image 1">
+        <!-- Simple centered content -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-image" style="margin-bottom: 0; line-height: 0; height: auto; position: static;">
+                    <img src="nameupdated.png" alt="Femme Storm" style="max-width: 350px; width: 100%; height: auto; margin-bottom: 30px; display: block;">
                 </div>
-                <div class="floating-image floating-image-2">
-                    <img src="double.png" alt="Floating Image 2">
+                <div style="border: 2px solid black; padding: 10px; margin: 0 0 15px 0; text-align: center; cursor: pointer; transition: background-color 0.2s;">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0 0 5px 0; font-family: 'Source Code Pro', 'Courier New', monospace;">
+                                *** a digital archive by shereen golkar ***
+                            </p>
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;">
+                                 a personal collection of </p>
+                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> images </p>
+                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> writings </p>
+                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> modeling </p>
+                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> & recent projects. </p>
+                </div>
+                
+                <div class="bottom-image" style="position: absolute; right: 100px; top: 65%; transform: translateY(-50%); line-height: 0; height: auto;">
+                    <img src="imagefull.png" alt="Bottom Image" style="max-width: 300px; width: 100%; height: auto; display: block;">
+                </div>
+                
+                <div class="left-image" style="position: absolute; left: 100px; top: 70%; transform: translateY(-50%); line-height: 0; height: auto;">
+                    <img src="double.png" alt="Left Image" style="max-width: 300px; width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </section>
     </main>
 
-
-
-    <!-- Bottom social links matching photo design -->
-    <footer class="artistic-footer">
-        <div class="bottom-social-links">
-            <a href="https://www.instagram.com/solarshereen/" target="_blank" class="bottom-social-link">instagram</a>
-            <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="bottom-social-link">spotify</a>
-            <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="bottom-social-link">linkedin</a>
+    <!-- Simple footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/solarshereen/" target="_blank" class="social-link">instagram</a>
+                    <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="social-link">spotify</a>
+                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="social-link">linkedin</a>
+                </div>
+                <p>&copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i></p>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Make floating images draggable
-        document.addEventListener('DOMContentLoaded', function() {
-            const floatingImages = document.querySelectorAll('.floating-image');
-            
-            floatingImages.forEach(image => {
-                let isDragging = false;
-                let startX, startY, offsetX, offsetY;
-                
-                image.addEventListener('mousedown', function(e) {
-                    isDragging = true;
-                    image.style.cursor = 'grabbing';
-                    image.style.zIndex = '100';
-                    
-                    const rect = image.getBoundingClientRect();
-                    offsetX = e.clientX - rect.left;
-                    offsetY = e.clientY - rect.top;
-                    
-                    e.preventDefault();
-                });
-                
-                document.addEventListener('mousemove', function(e) {
-                    if (!isDragging) return;
-                    
-                    const x = e.clientX - offsetX;
-                    const y = e.clientY - offsetY;
-                    
-                    image.style.position = 'fixed';
-                    image.style.left = x + 'px';
-                    image.style.top = y + 'px';
-                    image.style.right = 'auto';
-                    image.style.bottom = 'auto';
-                });
-                
-                document.addEventListener('mouseup', function() {
-                    if (isDragging) {
-                        isDragging = false;
-                        image.style.cursor = 'grab';
-                        image.style.zIndex = '5';
-                    }
-                });
-                
-                // Add grab cursor on hover
-                image.style.cursor = 'grab';
-            });
-        });
-    </script>
 </body>
 </html>

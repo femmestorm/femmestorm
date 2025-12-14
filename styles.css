@@ -293,9 +293,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.floating-image:hover {
-    transform: scale(1.05);
-}
 
 .floating-image img {
     width: 100%;
@@ -305,21 +302,21 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Position floating images */
+/* Position floating images to flank the central text */
 .floating-image-1 {
-    top: 25%;
-    right: 13%;
+    top: 50%;
+    left: 15%;
     width: 270px;
     height: 397.5px;
-    transform: rotate(0deg);
+    transform: translateY(-50%);
 }
 
 .floating-image-2 {
-    top: 60%;
-    right: 20%;
+    top: 50%;
+    right: 15%;
     width: 233.09px;
     height: 314.6px;
-    transform: rotate(0deg);
+    transform: translateY(-50%);
 }
 
 .overlay-content {
@@ -584,11 +581,11 @@ body {
     background: var(--background-white);
     color: var(--text-dark);
     text-align: center;
-    min-height: 70vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 40px;
+    padding: 40px 40px;
 }
 
 /* Full screen hero image */
@@ -712,14 +709,14 @@ body {
 .hero-title {
     font-size: 2.8rem;
     font-family: var(--font-primary);
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-weight: normal;
     letter-spacing: -0.02em;
 }
 
 .hero-description {
     font-size: 1.4rem;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     color: var(--secondary-color);
     max-width: 600px;
     margin-left: auto;
@@ -1231,9 +1228,30 @@ body:has(.hero-fullscreen) .footer {
 
 /* Responsive Design - Styles for different screen sizes */
 
+/* Move images below content when they would overlap with text */
+@media (max-width: 900px) {
+    .bottom-image,
+    .left-image {
+        position: relative !important;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        text-align: center !important;
+        margin: 20px auto 0 auto !important;
+    }
+    
+    .bottom-image img,
+    .left-image img {
+        margin: 0 auto !important;
+    }
+}
+
 /* Tablet styles */
 @media (max-width: 768px) {
-    .navbar {
+    
+    /* Mobile navigation for non-home pages */
+    .navbar:not(.home-page .navbar) {
         position: fixed;
         top: 0;
         left: 0;
@@ -1261,9 +1279,110 @@ body:has(.hero-fullscreen) .footer {
         gap: 20px;
     }
     
+    /* Adjust main content for mobile nav on non-home pages */
     .main-content {
         margin-left: 0;
-        margin-top: 80px; /* Account for top nav on mobile */
+        margin-top: 80px;
+    }
+    
+    /* Home page mobile - use standard mobile nav */
+    .home-page .navbar {
+        display: block; /* Show navbar on mobile home page */
+    }
+    
+    .home-page .nav-logo {
+        display: block; /* Show logo on mobile home page */
+    }
+    
+    .home-page .nav-menu {
+        display: flex; /* Show menu on mobile home page */
+    }
+    
+    .home-page .main-content {
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+    
+    .title-link {
+        display: none; /* Hide separate title link on mobile */
+    }
+    
+    /* Mobile home page - vertical scrollable layout */
+    .home-page .fullscreen-background {
+        height: auto;
+        min-height: calc(100vh - 80px);
+        padding: 40px 0;
+    }
+    
+    .home-page .text-background-container {
+        position: relative;
+        margin-bottom: 40px;
+        height: auto;
+    }
+    
+    .home-page .text-background-img {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .home-page .floating-images {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .home-page .floating-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        width: 280px;
+        max-width: 90%;
+    }
+    
+    .home-page .floating-image-1 {
+        height: 350px;
+    }
+    
+    .home-page .floating-image-2 {
+        height: 300px;
+    }
+    
+    
+    /* Mobile social links */
+    .bottom-social-links {
+        flex-direction: row;
+        gap: 40px;
+        bottom: 20px;
+    }
+    
+    .bottom-social-link {
+        font-size: 1rem;
+    }
+    
+    /* Photos page mobile navigation */
+    .photos-page .container {
+        padding: 0 15px;
+        margin-right: 15px;
+    }
+    
+    .page-header {
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+    
+    .page-header .container {
+        max-width: none;
+        margin: 0 auto;
     }
     
     .hero-title {
@@ -1332,6 +1451,7 @@ body:has(.hero-fullscreen) .footer {
         padding: 0 15px;
     }
     
+    /* Non-home page mobile navigation */
     .nav-container {
         padding: 10px 15px;
         flex-direction: column;
@@ -1341,10 +1461,87 @@ body:has(.hero-fullscreen) .footer {
     .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
     }
     
     .main-content {
         margin-top: 120px; /* Account for taller mobile nav */
+    }
+    
+    /* Home page mobile specific - smaller screens - use standard settings */
+    
+    .home-page .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .title-link {
+        display: none;
+    }
+    
+    /* Smaller mobile adjustments */
+    .home-page .text-background-img {
+        width: 85%;
+        max-width: 250px;
+    }
+    
+    .home-page .floating-image {
+        width: 250px;
+        max-width: 85%;
+    }
+    
+    .home-page .floating-image-1 {
+        height: 310px;
+    }
+    
+    .home-page .floating-image-2 {
+        height: 270px;
+    }
+    
+    
+    /* Enhanced touch targets for mobile */
+    .floating-image {
+        cursor: grab;
+        touch-action: none;
+    }
+    
+    .floating-image:active {
+        cursor: grabbing;
+    }
+    
+    /* Mobile social links adjustments */
+    .bottom-social-links {
+        gap: 25px;
+        bottom: 15px;
+    }
+    
+    .bottom-social-link {
+        font-size: 0.9rem;
+        padding: 10px 5px; /* Larger touch target */
+    }
+    
+    /* Photos page mobile optimizations */
+    .photos-page .page-header {
+        padding: 30px 0 15px;
+    }
+    
+    .photos-page h1 {
+        font-size: 1.2rem;
+    }
+    
+    .photos-page h3 {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        font-size: 1.2rem;
+        padding: 12px 0;
+        min-height: 44px; /* iOS touch target */
     }
     
     .hero {
@@ -1388,6 +1585,15 @@ body:has(.hero-fullscreen) .footer {
         flex-direction: column;
         align-items: center;
     }
+    
+    /* Improve touch interactions */
+    a, button, .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
 
 /* Utility classes - handy classes you can use */
