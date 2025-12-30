@@ -27,13 +27,13 @@
                     <a href="info.html" class="nav-link">info</a> 
                 </li>
                 <li class="nav-item">
-                    <a href="self.html" class="nav-link">self</a>
+                    <a href="modeling.html" class="nav-link">modeling</a>
                 </li>
                 <li class="nav-item">
                     <a href="blog.html" class="nav-link">blog</a>
                 </li>
                 <li class="nav-item">
-                    <a href="photos.html" class="nav-link active">image</a>
+                    <a href="photos.html" class="nav-link active">photos</a>
                 </li>
             </ul>
         </div>
@@ -49,12 +49,14 @@
                 <!-- Description area -->
                 <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
                     <!-- Add your description here -->
-                    <p> exploring moments through different lenses + perspectives, capturing the world in film and digital formats. </p
-
-                
+                    <p>exploring moments through different lenses + perspectives, capturing the world in film and digital formats.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Photo collections section -->
+        <section class="photo-collections" style="padding: 40px 0;">
+            <div class="container">
                 <!-- Photo collections list -->
                 <div style="position: relative; text-align: center; max-width: 600px; margin: 0 auto;">
                     
@@ -65,13 +67,13 @@
                         </h3>
                         <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/creature.html" class="btn btn-primary">creature</a>
+                                <a href="#" class="btn btn-primary">creature</a>
                             </li>
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/patterns.html" class="btn btn-primary">patterns</a>
+                                <a href="#" class="btn btn-primary">patterns</a>
                             </li>
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/misc.html" class="btn btn-primary">misc.</a>
+                                <a href="#" class="btn btn-primary">misc.</a>
                             </li>
                         </ul>
                     </div>
@@ -83,13 +85,13 @@
                         </h3>
                         <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/sky.html" class="btn btn-primary">sky</a>
+                                <a href="#" class="btn btn-primary">sky</a>
                             </li>
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/color.html" class="btn btn-primary">color</a>
+                                <a href="#" class="btn btn-primary">color</a>
                             </li>
                             <li style="margin-bottom: 10px;">
-                                <a href="gallery/around.html" class="btn btn-primary">around</a>
+                                <a href="#" class="btn btn-primary">around</a>
                             </li>
                         </ul>
                     </div>
@@ -107,47 +109,17 @@
     </main>
 
     <!-- Footer -->
- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="social-links">
                     <a href="https://www.instagram.com/solarshereen/" target="_blank" class="social-link">instagram</a>
                     <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="social-link">spotify</a>
-                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target= "_blank" class="social-link">linkedin</a>
+                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="social-link">linkedin</a>
                 </div>
                 <p> &copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i> </p>
             </div>
         </div>
     </footer>
-
-    <!-- Simple JavaScript for photo filtering -->
-    <script>
-        // Photo filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-
-            // Add click event to each filter button
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-
-                    const filter = this.getAttribute('data-filter');
-
-                    // Show/hide gallery items based on filter
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
