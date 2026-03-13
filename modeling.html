@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modeling</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-color: #fefbf3;" class="modeling-page">
@@ -19,7 +15,8 @@
             <div class="nav-logo">
                 <a href="index.html"><small>femmestorm</small></a>
             </div>
-            <ul class="nav-menu">
+            <button class="nav-toggle" onclick="toggleNav()">***</button>
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="info.html" class="nav-link">info</a>
                 </li>
@@ -36,47 +33,139 @@
         </div>
     </nav>
 
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8592;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8594;</button>
+    </div>
+
     <!-- Main content area -->
     <main class="main-content">
         <!-- Page header -->
         <section class="page-header" style="text-align: right; padding: 60px 0 40px;">
             <div class="container" style="max-width: 400px; margin-left: auto; margin-right: 40px;">
-                <!-- Minimized heading -->
                 <h1 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--text-dark); font-weight: normal;">portfolio</h1>
-                <!-- Description area -->
                 <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
-                    <!-- Add your description here -->
                     <p>modeling book</p>
                 </div>
             </div>
         </section>
 
-                    <!-- Right side - Space for images -->
-                    <div style="flex: 1;">
-                        <!-- Images can be uploaded here -->
-                        <div style="min-height: 300px; border: 1px dashed #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9rem;">
-                            Image upload area
-                        </div>
-                    </div>
-                </div>
+        <!-- shoots go here — copy a .shoot-row block to add a new one -->
+
+        <div class="shoot-row">
+            <div class="shoot-label"> Shot by Jason Thomas Geering </div>
+            <div class="shoot-strip">
+                <img src="modeling-photos/jason/jason1.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason2.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason3.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason4.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason5.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason6.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason7.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason8.jpg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/jason/jason9.jpg" alt="modeling photo" loading="lazy">
             </div>
-        </section>
+        </div>
+        <div class="shoot-row">
+            <div class="shoot-label"> Girl 22 by Rina Mintz</div>
+            <div class="shoot-strip">
+                <img src="modeling-photos/rina/rina1.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina2.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina3.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina4.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina4.5.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina5.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina6.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina7.jpeg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/rina/rina8.jpeg" alt="modeling photo" loading="lazy">
+            </div>
 
+        <!-- To add a new shoot, copy the block below and fill in the label and image paths:
 
-       
+        <div class="shoot-row">
+            <div class="shoot-label">shoot name</div>
+            <div class="shoot-strip">
+                <img src="modeling-photos/photo1.jpg" alt="modeling photo" loading="lazy">
+                <img src="modeling-photos/photo2.jpg" alt="modeling photo" loading="lazy">
+            </div>
+        </div>
+
+        -->
+
+    </main>
 
     <!-- Footer -->
- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="social-links">
                     <a href="https://www.instagram.com/solarshereen/" target="_blank" class="social-link">instagram</a>
                     <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="social-link">spotify</a>
-                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target= "_blank" class="social-link">linkedin</a>
+                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="social-link">linkedin</a>
                 </div>
                 <p> &copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i> </p>
             </div>
         </div>
     </footer>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let images = [];
+        let current = 0;
+
+        function openLightbox(index) {
+            current = index;
+            lightboxImg.src = images[current].src;
+            lightboxImg.alt = images[current].alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showPrev() {
+            current = (current - 1 + images.length) % images.length;
+            lightboxImg.src = images[current].src;
+        }
+
+        function showNext() {
+            current = (current + 1) % images.length;
+            lightboxImg.src = images[current].src;
+        }
+
+        function initGallery() {
+            const items = document.querySelectorAll('.shoot-strip img');
+            images = Array.from(items);
+            items.forEach((img, i) => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', () => openLightbox(i));
+            });
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox-prev').addEventListener('click', showPrev);
+        document.getElementById('lightbox-next').addEventListener('click', showNext);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+        });
+
+        initGallery();
+    </script>
+    <script src="nav.js"></script>
 </body>
 </html>

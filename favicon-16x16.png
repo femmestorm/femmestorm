@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-  <!-- 5-pointed star -->
-  <polygon points="8,2.4 9.28,6.4 13.6,6.4 10.24,9.28 11.52,13.28 8,10.88 4.48,13.28 5.76,9.28 2.4,6.4 6.72,6.4" 
-           fill="none" 
-           stroke="#B8860B" 
-           stroke-width="1" 
-           stroke-linejoin="round"/>
-</svg>
