@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>femme storm</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="FSicon.png">
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
-<body style="background-color: #fefbf3;">
+<body style="background: url('FShome.jpg') center/cover fixed no-repeat; min-height: 100vh;">
+
+    <div class="text-overlay">
+  <h1>femme storm </h1>
+  
+  <p>a digital archive</p>
+  <p>       by shereen golkar</p>
+
+
+</div>
     <!-- Navigation bar - same as other pages -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html"><small>femmestorm</small></a>
+                <a href="index.html">
+                    <img src= "FSicon.png" alt= "home" style="width:130px;height:130px" >
+                </a>
             </div>
             <button class="nav-toggle" onclick="toggleNav()">***</button>
             <ul class="nav-menu" id="nav-menu">
@@ -34,49 +44,17 @@
         </div>
     </nav>
 
-    <main class="main-content">
-        <!-- Simple centered content -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-image" style="margin-bottom: 0; line-height: 0; height: auto; position: static;">
-                    <img src="nameupdated.png" alt="Femme Storm" style="max-width: 350px; width: 100%; height: auto; margin-bottom: 30px; display: block;">
-                </div>
-                <div style="border: 2px solid black; padding: 10px; margin: 0 0 15px 0; text-align: center; cursor: pointer; transition: background-color 0.2s;">
-                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0 0 5px 0; font-family: 'Source Code Pro', 'Courier New', monospace;">
-                                *** a digital archive by shereen golkar ***
-                            </p>
-                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;">
-                                 a personal collection of </p>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> modeling </p>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> writings </p>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> images</p>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0; font-family: 'Source Code Pro', 'Courier New', monospace;"> & recent projects </p>
-                </div>
 
-                <div class="bottom-image" style="position: absolute; right: 100px; top: 65%; transform: translateY(-50%); line-height: 0; height: auto;">
-                    <img src="imagefull.png" alt="Bottom Image" style="max-width: 300px; width: 100%; height: auto; display: block;">
-                </div>
+  <!-- PNG image with transparency over background -->
+  <main class="main-content home-page">
+    <section class="hero hero-fullscreen">
+      <div class="transparent-png-container">
+        <img src="nameupdated.png" alt="Femme Storm" class="transparent-png-image">
+      </div>
+    </section>
+  </main>
 
-                <div class="left-image" style="position: absolute; left: 100px; top: 70%; transform: translateY(-50%); line-height: 0; height: auto;">
-                    <img src="double.png" alt="Left Image" style="max-width: 300px; width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Simple footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://www.instagram.com/solarshereen/" target="_blank" class="social-link">instagram</a>
-                    <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="social-link">spotify</a>
-                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="social-link">linkedin</a>
-                </div>
-                <p>&copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i></p>
-            </div>
-        </div>
-    </footer>
+  
     <script src="nav.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
     /* Modern minimal typography */
     --font-primary: 'Times New Roman', Times, serif;
     --font-secondary: 'Times New Roman', Times, serif;
-    
+
     /* Generous spacing for minimalist design */
     --container-max-width: 1200px;
     --section-padding: 120px 0;
@@ -611,11 +611,61 @@ body {
     padding: 40px 40px;
 }
 
+/* Text overlay for home page */
+.text-overlay {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 20;
+}
+
+.text-overlay h1 {
+    font-size: 2.4rem;
+    color: var(--background-white);
+    font-family: var(--font-sans);
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.text-overlay p {
+    font-size: 1.2rem;
+    color: var(--background-light);
+    font-family: var(--font-light);
+    font-weight: light;
+    font-style:normal;
+    margin: 0;
+    letter-spacing: .05em;
+}
+.transparent-png-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.transparent-png-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
 /* Full screen hero image */
 .hero-fullscreen {
     min-height: 100vh;
     padding: 0;
     margin: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-image {

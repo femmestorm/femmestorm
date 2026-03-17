@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photos</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Link to your common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #fefbf3;" class="photos-page">
+    <!-- Navigation bar - same across all pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Your site logo/name -->
+            <div class="nav-logo">
+                <a href="index.html"><small>femmestorm</small></a>
+            </div>
+            <button class="nav-toggle" onclick="toggleNav()">***</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="info.html" class="nav-link">info</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="modeling.html" class="nav-link">modeling</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="photos.html" class="nav-link active">photos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <!-- Page header -->
+        <section class="page-header" style="text-align: right; padding: 60px 0 40px;">
+            <div class="container" style="max-width: 400px; margin-left: auto; margin-right: 40px;">
+                <!-- Minimized heading -->
+                <h1 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--text-dark); font-weight: normal;">collections</h1>
+                <!-- Description area -->
+                <div style="font-size: 1rem; color: var(--secondary-color); line-height: 1.6;">
+                    <!-- Add your description here -->
+                    <p>exploring moments through different perspectives, capturing the world in film formats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo collections section -->
+        <section class="photo-collections" style="padding: 40px 0;">
+            <div class="container">
+                <!-- Photo collections list -->
+                <div style="position: relative; text-align: center; max-width: 600px; margin: 0 auto;">
+                    
+                    <!-- Film collections -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); text-align: center;">
+                            on film
+                        </h3>
+                        <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">creature</a>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">patterns</a>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">misc.</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Digital collections -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); text-align: center;">
+                            digital
+                        </h3>
+                        <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">sky</a>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">color</a>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-primary">around</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Add some spacing sections like other pages -->
+        <section style="padding: 120px 0;">
+            <div class="container">
+                <!-- Empty section for spacing -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/solarshereen/" target="_blank" class="social-link">instagram</a>
+                    <a href="https://open.spotify.com/user/shxreen.18?si=28f7cfc9f26246c7" target="_blank" class="social-link">spotify</a>
+                    <a href="https://www.linkedin.com/in/shereen-golkar-02ba49292/" target="_blank" class="social-link">linkedin</a>
+                </div>
+                <p> &copy; <i><small>2025 FemmeStorm. All rights reserved.</small></i> </p>
+            </div>
+        </div>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+</html>

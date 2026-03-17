@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>photos</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="FSicon.png">
     <!-- Link to your common stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,7 +14,9 @@
         <div class="nav-container">
             <!-- Your site logo/name -->
             <div class="nav-logo">
-                <a href="index.html"><small>femmestorm</small></a>
+                <a href="index.html">
+                    <img src="FSicon.png" alt="home" style="width:60px;height:60px">
+                </a>
             </div>
             <button class="nav-toggle" onclick="toggleNav()">***</button>
             <ul class="nav-menu" id="nav-menu">
@@ -51,48 +52,109 @@
         </section>
 
         <!-- Photo collections section -->
-        <section class="photo-collections" style="padding: 40px 0;">
+        <section class="photo-collections" style="padding: 60px 0;">
             <div class="container">
-                <!-- Photo collections list -->
-                <div style="position: relative; text-align: center; max-width: 600px; margin: 0 auto;">
-                    
-                    <!-- Film collections -->
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); text-align: center;">
-                            on film
-                        </h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">creature</a>
-                            </li>
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">patterns</a>
-                            </li>
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">misc.</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <!-- Digital collections -->
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-dark); text-align: center;">
-                            digital
-                        </h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8; text-align: center;">
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">sky</a>
-                            </li>
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">color</a>
-                            </li>
-                            <li style="margin-bottom: 10px;">
-                                <a href="#" class="btn btn-primary">around</a>
-                            </li>
-                        </ul>
+                <!-- CREATURE COLLECTION -->
+                <div class="gallery-section mb-40">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: var(--text-dark); text-align: left;">creature</h3>
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="creature 1" class="gallery-img" data-lightbox="creature">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x400" alt="creature 2" class="gallery-img" data-lightbox="creature">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x600" alt="creature 3" class="gallery-img" data-lightbox="creature">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x450" alt="creature 4" class="gallery-img" data-lightbox="creature">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="creature 5" class="gallery-img" data-lightbox="creature">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x500" alt="creature 6" class="gallery-img" data-lightbox="creature">
+                        </div>
                     </div>
-
                 </div>
+
+                <!-- PATTERNS COLLECTION -->
+                <div class="gallery-section mb-40">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: var(--text-dark); text-align: left;">patterns</h3>
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x450" alt="patterns 1" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="patterns 2" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x400" alt="patterns 3" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x600" alt="patterns 4" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x500" alt="patterns 5" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x450" alt="patterns 6" class="gallery-img" data-lightbox="patterns">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKY COLLECTION -->
+                <div class="gallery-section mb-40">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: var(--text-dark); text-align: left;">sky</h3>
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="sky 1" class="gallery-img" data-lightbox="sky">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x500" alt="sky 2" class="gallery-img" data-lightbox="sky">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x600" alt="sky 3" class="gallery-img" data-lightbox="sky">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x450" alt="sky 4" class="gallery-img" data-lightbox="sky">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x400" alt="sky 5" class="gallery-img" data-lightbox="sky">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="sky 6" class="gallery-img" data-lightbox="sky">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLOR COLLECTION -->
+                <div class="gallery-section mb-40">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: var(--text-dark); text-align: left;">color</h3>
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x450" alt="color 1" class="gallery-img" data-lightbox="color">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x500" alt="color 2" class="gallery-img" data-lightbox="color">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x500" alt="color 3" class="gallery-img" data-lightbox="color">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/400x600" alt="color 4" class="gallery-img" data-lightbox="color">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/350x500" alt="color 5" class="gallery-img" data-lightbox="color">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="https://via.placeholder.com/300x400" alt="color 6" class="gallery-img" data-lightbox="color">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -117,6 +179,15 @@
             </div>
         </div>
     </footer>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <button class="lightbox-prev" onclick="prevImage()">❮</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <button class="lightbox-next" onclick="nextImage()">❯</button>
+    </div>
+
     <script src="nav.js"></script>
+    <script src="gallery.js"></script>
 </body>
 </html>
