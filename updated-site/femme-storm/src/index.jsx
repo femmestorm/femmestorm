@@ -1,18 +1,15 @@
-import Navigo from 'navigo';
-
+import Navigo from "navigo";
 
 const render = (htmlContent) => {
-    document.querySelector('#content').innerHTML = htmlContent;
+  document.querySelector("#content").innerHTML = htmlContent;
 };
 
+const router = new Navigo("/");
 
-const router = new Navigo('/');
+router.on("/", () => {
+  render("<h1>Testing</h1>");
+});
 
-router
-  .on("/", () => {
-    render("<h1>Testing</h1>")
-  })
-
-window.addEventListener('DOMContentLoaded', () => {
-    router.resolve();
+window.addEventListener("DOMContentLoaded", () => {
+  router.resolve();
 });
