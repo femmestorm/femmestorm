@@ -1,17 +1,22 @@
 {
-  "name": "femme-storm",
-  "version": "0.0.0",
-  "private": true,
+  "name": "femme-storm-astro",
   "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format": "npx prettier . --write"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "astro": "^7.1.3"
   },
   "devDependencies": {
-    "navigo": "^8.11.1",
-    "prettier": "3.9.5",
-    "vite": "^8.1.1"
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
