@@ -4,20 +4,21 @@ import { contentfulClient } from "@lib/contentful";
 
 export async function getStaticPaths() {
   const entries = await contentfulClient.getEntries({
-    "content_type": "artworkCategory",
+    content_type: "artworkCategory",
   });
 
   const pages = entries.items.map((item) => ({
     params: { slug: item.fields.slug },
-    props: { category: item.fields.category }
+    props: { category: item.fields.category },
   }));
 
-  return pages
+  return pages;
 }
 
 const { slug } = Astro.params;
 const { category } = Astro.props;
 ---
+
 <FemmeStorm title={category}>
   <h1>{category}</h1>
 </FemmeStorm>

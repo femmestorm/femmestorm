@@ -7,6 +7,7 @@ This is setup that only needs to be run once when setting up the project for tes
 ### Installation
 
 1. Make sure all of the dependencies are installed:
+
 ```shell
 yarn install
 ```
