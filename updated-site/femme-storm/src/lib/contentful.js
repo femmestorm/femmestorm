@@ -8,3 +8,13 @@ export const contentfulClient = contentful.createClient({
   host: import.meta.env.DEV ? "preview.contentful.com" : "cdn.contentful.com",
   space: import.meta.env.CONTENTFUL_SPACE_ID,
 });
+
+
+export async function fetchMediums() {
+  const mediums = await contentfulClient.getEntries({
+    content_type: "workMediums",
+    include: 2,
+  });
+
+  return mediums
+}
