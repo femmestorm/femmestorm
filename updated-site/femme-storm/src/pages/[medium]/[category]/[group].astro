@@ -1,0 +1,26 @@
+---
+import FemmeStorm from "@layouts/FemmeStorm.astro";
+import { fetchMediums } from "@lib/contentful";
+
+export async function getStaticPaths() {
+  const mediums = await fetchMediums();
+
+  const mediumCategoryGroups = mediums.items.flatMap(medium => medium.fields.categories ? medium.fields.categories.flatMap(category => category.fields.groups ? category.fields.groups.map(group => ({medium: medium, category: category, group: group})) : []) : [])
+
+  const pages = mediumCategoryGroups.map(mediumCategoryGroup => ({
+    params: {
+      medium: mediumCategoryGroup.medium.fields.name,
+      category: mediumCategoryGroup.category.fields.category,
+      group: mediumCategoryGroup.group.fields.slug,
+    }
+  }));
+
+  return pages;
+}
+
+const { group } = Astro.params
+---
+
+<FemmeStorm title={group}>
+  <h1>{group}</h1>
+</FemmeStorm>
